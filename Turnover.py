@@ -87,12 +87,15 @@ metrics = ['CoreContribution', 'TechReadiness', 'OrgImpact', 'Wellbeing', 'Poten
 columns_basic_en = [mapping[m] for m in ['Employee.Name'] + metrics]
 
 st.markdown(f"""
-    <div style='background-color: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 5px solid #28A745;'>
-        <strong>Note:</strong> The default view displays the <b>'Average Score'</b>. <br>
-        Average values are indicated by the <span style='color: #28A745; font-weight: bold;'>● Green</span> markers and their corresponding values. <br>
-        To view an individual employee's performance, please enter their name in the search box below.
-    </div>
-    """, unsafe_allow_html=True)
+<div style='background-color: var(--secondary-background-color); 
+            padding: 15px; 
+            border-radius: 8px; 
+            border-left: 5px solid var(--primary-color);'>
+    <strong>Note:</strong> The default view displays the <b>'Average Score'</b>. <br>
+    Average values are indicated by the <b>●</b> markers and their corresponding values. <br>
+    To view an individual employee's performance, please enter their name in the search box below.
+</div>
+""", unsafe_allow_html=True)
 
 st.write("")
 
@@ -143,12 +146,16 @@ st.divider()
 st.title("Employee List")
 
 st.markdown(f"""
-    <div style='background-color: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 5px solid #28A745;'>
-        Above Average:  (≥) Average Talent Score. <br> 
-        Below Average: (<) Average Talent Score. <br>
-        Employees in the list are ranked in <b>descending order</b> based on their <b>Talent Score</b>.
-    </div>
-    """, unsafe_allow_html=True)
+<div style='background-color: var(--secondary-background-color); 
+            padding: 15px; 
+            border-radius: 8px; 
+            border-left: 5px solid var(--primary-color);
+            color: var(--text-color);'>
+    Above Average: (≥) Average Talent Score. <br> 
+    Below Average: (<) Average Talent Score. <br>
+    Employees in the list are ranked in <b>descending order</b> based on their <b>Talent Score</b>.
+</div>
+""", unsafe_allow_html=True)
 
 st.write("")
 
